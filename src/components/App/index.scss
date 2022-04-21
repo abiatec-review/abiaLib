@@ -1,0 +1,14 @@
+.app {
+  &_container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &_title {
+    background: rgb(255, 249, 193);
+    border-radius: 30%;
+    padding: 20px;
+  }
+}
