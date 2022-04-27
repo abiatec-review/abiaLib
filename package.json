@@ -1,9 +1,10 @@
 {
   "name": "abia-lib",
-  "version": "1.0.0",
+  "version": "1.1.8",
   "description": "",
   "main": "build/bundle.js",
   "scripts": {
+    "pub": "webpack --mode production && npm version patch && npm publish",
     "build": "webpack --mode production",
     "start": "webpack serve",
     "storybook": "start-storybook -p 6006",

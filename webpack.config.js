@@ -5,7 +5,7 @@ const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 require('dotenv').config()
 
 module.exports = {
-    mode: 'prodaction',
+    mode: 'production',
     entry: './src/index.ts',
     output: {
         filename: 'bundle.js',
