@@ -1,4 +1,4 @@
-/* eslint-disable no-restricted-imports */
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
