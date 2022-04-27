@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 require('dotenv').config()
@@ -8,7 +7,7 @@ module.exports = {
     mode: 'production',
     entry: './src/index.ts',
     output: {
-        filename: 'bundle.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, "build"),
         libraryTarget: "umd",
         clean: true,
@@ -26,12 +25,6 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './public/index.html'
-        })
-
-    ],
     devServer: {
         port: process.env.APP_PORT || 3333,
         static: {

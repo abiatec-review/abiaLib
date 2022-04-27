@@ -7,8 +7,10 @@ interface IButton {
   children: JSX.Element | string
 }
 
-export const Button: React.FC<IButton> = ({ className, children }) => (
+const Button: React.FC<IButton> = ({ className, children }) => (
   <div className={`button ${className} `}>
     { children }
   </div>
 );
+
+export default Button;
