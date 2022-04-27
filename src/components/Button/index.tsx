@@ -12,5 +12,3 @@ export const Button: React.FC<IButton> = ({ className, children }) => (
     { children }
   </div>
 );
-
-export default Button;

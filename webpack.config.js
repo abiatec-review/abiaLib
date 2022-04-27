@@ -5,12 +5,13 @@ const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 require('dotenv').config()
 
 module.exports = {
-    mode: 'prodaction',
+    mode: 'production',
     entry: './src/index.ts',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, "build"),
-        clean: true
+        libraryTarget: "umd",
+        clean: true,
     },
     module: {
         rules: [

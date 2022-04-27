@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "build",
-    "target": "es5",
-    "module": "esnext",
+    "target": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -61,7 +61,8 @@
     "**/*.spec.ts",
     "node_modules",
     "vendor",
-    "public"
+    "public",
+    "build"
   ],
   "compileOnSave": false
 }
