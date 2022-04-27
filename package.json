@@ -4,6 +4,7 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
+    "pub": "webpack --mode production && npm version patch && npm publish",
     "build": "webpack --mode production",
     "start": "webpack serve",
     "storybook": "start-storybook -p 6006",
