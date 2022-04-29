@@ -63,7 +63,8 @@
     "node_modules",
     "vendor",
     "public",
-    "build"
+    "build",
+    ".eslintrc.js"
   ],
   "compileOnSave": false
 }

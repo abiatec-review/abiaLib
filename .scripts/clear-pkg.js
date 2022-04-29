@@ -13,8 +13,6 @@ fs.writeFile(savedPkgPath, JSON.stringify(pkg, null, 2), function (err) {
 [
     "scripts",
     "devDependencies",
-    "peerDependencies"
-
 ].forEach((el) => {
     delete pkg[el]
 });
