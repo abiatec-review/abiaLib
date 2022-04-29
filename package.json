@@ -52,7 +52,6 @@
     "eslint-plugin-storybook": "^0.5.11",
     "html-webpack-plugin": "^5.5.0",
     "lodash": "^4.17.21",
-    "node-sass": "^7.0.1",
     "sass": "^1.51.0",
     "sass-loader": "10.1.1",
     "style-loader": "2.0.0",
