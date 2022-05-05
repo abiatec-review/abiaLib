@@ -1,3 +1,110 @@
-.button {
-  color: green;
+@import '../styles/constants';
+
+.abi-button {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: background 400ms;
+  outline: 0;
+  border: 0;
+  border-radius: 30px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-family: $main-font-family;
+  height: 48px;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: $button-shadow;
+    -moz-box-shadow: $button-shadow;
+    box-shadow: $button-shadow;
+  }
+
+  &.abi-button_disabled {
+    &:hover {
+      cursor: auto;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.abi-button__contained {
+  color: $white;
+  background-color: $main-blue;
+  .abi-button_icon svg {
+    fill: $white;
+  }
+  &.abi-button_disabled {
+    background-color: $gray;
+    color: $text-gray;
+    svg {
+      fill: $text-gray;
+    }
+  }
+  
+}
+
+.abi-button__outlined {
+  color: $main-blue;
+  background: none;
+  border: 1px solid $main-blue;
+  .abi-button_icon svg {
+    fill: $main-blue;
+  }
+  span.ripple {
+    background-color: $button-outlined-blue;
+  }
+  &.abi-button_disabled {
+    border: 1px solid $text-gray;
+    color: $text-gray;
+
+    svg {
+      fill: $text-gray;
+    }
+  }
+}
+
+.abi-button__text {
+  color: $main-blue;
+  background: none;
+  border: none;
+
+  span.ripple {
+    background-color: $button-outlined-blue;
+  }
+  .abi-button_icon svg {
+    fill: $main-blue;
+  }
+  &.abi-button_disabled {
+    color: $text-gray;
+    svg {
+      fill: $text-gray;
+    }
+  }
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 700ms linear;
+  background-color: $button-ripple;
+}
+
+.abi-button_icon {
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
