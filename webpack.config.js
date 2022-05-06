@@ -1,16 +1,16 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 require('dotenv').config()
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.tsx',
+    mode: 'production',
+    entry: './src/index.ts',
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, "build")
+        filename: 'index.js',
+        path: path.resolve(__dirname, "build"),
+        libraryTarget: "umd",
+        clean: true,
     },
     module: {
         rules: [
@@ -25,13 +25,6 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: './public/index.html'
-        })
-
-    ],
     devServer: {
         port: process.env.APP_PORT || 3333,
         static: {
@@ -44,5 +37,4 @@ module.exports = {
         plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })],
         extensions: [".js", ".jsx", ".json", ".ts", ".tsx"]
     },
-
 }

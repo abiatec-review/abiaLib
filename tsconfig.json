@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "build",
-    "target": "es5",
-    "module": "esnext",
+    "outDir": "./build/",
+    "target": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -26,7 +26,7 @@
     "noUnusedLocals": true,
     "rootDir": "src",
     "baseUrl": "src",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": [
       "es5",
       "es6",
@@ -48,20 +48,23 @@
     "noErrorTruncation": true
   },
   "include": [
-    "src/**/*"
+    "src"
   ],
   "filesGlob": [
     "src/**/*.ts",
     "src/**/*.tsx"
   ],
   "types": [
-    "react"
+    "react",
+    "node"
   ],
   "exclude": [
     "**/*.spec.ts",
     "node_modules",
     "vendor",
-    "public"
+    "public",
+    "build",
+    ".eslintrc.js"
   ],
   "compileOnSave": false
 }

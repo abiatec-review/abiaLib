@@ -1,4 +1,4 @@
-{
+module.exports = {
     "env": {
         "browser": true,
         "es2021": true
@@ -23,6 +23,9 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "react/require-default-props": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-props-no-spreading": "off",
         "max-len": [
             "off",
             {
@@ -49,6 +52,11 @@
                 ]
             }
         ],
+        "indent": [
+            "error",
+            2
+        ],
+        "import/no-extraneous-dependencies": "off",
         "import/no-cycle": "off",
         "react/jsx-filename-extension": "off",
         "react/function-component-definition": "off",

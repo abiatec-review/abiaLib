@@ -1,8 +1,12 @@
 ### Abiatec Lib
 
+Workflow:
+
+1) Do not touch master
+2) Create your branch from develop
+3) PR to develop
 
 ```sh
-$ cd abiaLib
 $ yarn
 $ yarn start
 ```

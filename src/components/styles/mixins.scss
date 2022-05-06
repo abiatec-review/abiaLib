@@ -1,0 +1,7 @@
+@import "./constants.scss";
+
+@mixin largeDesktop {
+    @media (min-width: $large-desktop) {
+        @content ;
+    }
+}
