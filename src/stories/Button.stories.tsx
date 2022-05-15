@@ -6,6 +6,27 @@ import Button from 'components/Button';
 export default {
   title: 'Components/Simple/Button',
   component: Button,
+  argTypes: {
+    FABPosition: {
+      options: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'default'],
+      control: { type: 'radio' },
+    },
+    type: { 
+      table: { disable: true },
+    },
+    className: { 
+      table: { disable: true },
+    },
+    iconClassName: { 
+      table: { disable: true },
+    },
+    FABPositionClassNames: { 
+      table: { disable: true },
+    },
+    icon: { 
+      table: { disable: true },
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;

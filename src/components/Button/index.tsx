@@ -10,9 +10,11 @@ interface IButton {
   disabled?: boolean,
   onClick: () => void,
   icon? : JSX.Element,
+  FABPosition?: string;
+  FABPositionClassNames?: string;
 }
 
-const Button: React.FC<IButton> = ({ className, iconClassName, children, type = 'contained', disabled, onClick, icon }) => {
+const Button: React.FC<IButton> = ({ className, iconClassName, children, type = 'contained', disabled, onClick, icon, FABPosition, FABPositionClassNames }) => {
 
     function clickButton(event: any) {
       const button = event.currentTarget;
@@ -37,11 +39,12 @@ const Button: React.FC<IButton> = ({ className, iconClassName, children, type = 
 
       onClick()
   }
+  const FABPositionClasses = FABPosition ?  `abi-button_position abi-button_position__${FABPosition} ${FABPositionClassNames}` : ''
 
   return (
       <button 
         onClick={clickButton} 
-        className={`abi-button abi-button__${type} ${className} ${disabled && 'abi-button_disabled'}` } 
+        className={`abi-button abi-button__${type} ${disabled && 'abi-button_disabled'} ${FABPositionClasses} ${className}` } 
         disabled={disabled}
       >
         <span className={`abi-button_icon ${iconClassName}`}>{icon}</span>

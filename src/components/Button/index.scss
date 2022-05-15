@@ -29,6 +29,28 @@
       box-shadow: none;
     }
   }
+
+  &.abi-button_position {
+    position: absolute;
+    margin: 10px;
+    z-index: 999;
+  }
+  &.abi-button_position__top-left {
+    top: 0;
+    left: 0;
+  }
+  &.abi-button_position__top-right {
+    top: 0;
+    right: 0;
+  }
+  &.abi-button_position__bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  &.abi-button_position__bottom-left {
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .abi-button__contained {
