@@ -1,0 +1,22 @@
+.abi-circle-progress-bar {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+
+  &__bg {
+    fill: none;
+  }
+
+  &__filler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: none;
+    transition: stroke-dashoffset 850ms ease-in-out;
+  }
+
+  &__text {
+    text-anchor: middle;
+    alignment-baseline: middle;
+  }
+}
