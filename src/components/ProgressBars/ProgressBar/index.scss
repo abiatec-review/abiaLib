@@ -1,0 +1,13 @@
+.abi-progress-bar  {
+  height: 4px;
+  width: 100%;
+  background-color: rgba(80, 97, 255, 0.12);
+
+}
+
+.abi-progress-bar__filler {
+  height: 100%;
+  transition: width 1s ease-in-out;
+  background-color: #5061FF;
+
+}
