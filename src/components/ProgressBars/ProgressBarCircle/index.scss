@@ -13,6 +13,7 @@
     justify-content: center;
     fill: none;
     transition: stroke-dashoffset 850ms ease-in-out;
+    transform: rotate(200deg) translate(0, -105%) rotate(-289deg) translate(0, 35%);
   }
 
   &__text {
