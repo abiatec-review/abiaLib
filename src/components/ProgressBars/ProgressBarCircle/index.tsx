@@ -6,12 +6,12 @@ interface IProgressBarCircle {
   size: number,
   progress: number,
   strokeWidth: number,
-  circleOneStrokeColor: string,
-  circleTwoStrokeColor: string,
-  isBackground: boolean,
-  isText: boolean,
-  textFontSize: string,
-  textClassName: string
+  circleOneStrokeColor?: string,
+  circleTwoStrokeColor?: string,
+  isBackground?: boolean,
+  isText?: boolean,
+  textFontSize?: string,
+  textClassName?: string
 }
 
 const ProgressBarCircle: React.FC<IProgressBarCircle> = (props) => {

@@ -1,0 +1,93 @@
+.abi-toggle-switch__block {
+  display: flex;
+  align-items: center;
+
+  &_disabled {
+    opacity: 0.5;
+  }
+}
+
+.abi-toggle-switch__label {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.abi-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+
+  &__in {
+    height: 14px;
+    width: 36px;
+  }
+
+  &__out {
+    height: 30px;
+    width: 50px;
+  }
+}
+.abi-toggle-switch input[type="checkbox"] {
+  display: none;
+}
+.abi-toggle-switch .abi-toggle-switch__filler {
+  position: absolute;
+  cursor: pointer;
+  background-color: #9A9A9A;
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.2s ease;
+}
+.abi-toggle-switch__filler::before {
+  position: absolute;
+  content: "";
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.abi-toggle-switch__in .abi-toggle-switch__filler::before {
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -1px;
+}
+
+.abi-toggle-switch__out .abi-toggle-switch__filler::before {
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  top: 5px;
+}
+
+.abi-toggle-switch__in.abi-toggle-switch input[type="checkbox"]:checked + .abi-toggle-switch__filler::before {
+  background-color: #5061FF;
+}
+
+.abi-toggle-switch input[type="checkbox"]:checked + .abi-toggle-switch__filler::before {
+  transform: translateX(20px);
+}
+.abi-toggle-switch input[type="checkbox"]:checked + .abi-toggle-switch__filler {
+  background-color: rgba(80, 97, 255, 0.5);
+}
+
+.abi-toggle-switch__disabled {
+  opacity: 0.5;
+  &.abi-toggle-switch:hover.abi-toggle-switch .abi-toggle-switch__filler::before,
+  &.abi-toggle-switch:hover.abi-toggle-switch input[type="checkbox"]:checked + .abi-toggle-switch__filler::before{
+    box-shadow: none;
+  }
+}
+
+.abi-toggle-switch:hover {
+  &.abi-toggle-switch .abi-toggle-switch__filler::before {
+    box-shadow: 0 0 0 10px rgba(95, 95, 95, 0.15);
+  }
+  &.abi-toggle-switch input[type="checkbox"]:checked + .abi-toggle-switch__filler::before {
+    box-shadow: 0 0 0 10px rgba(80, 97, 255, 0.15);
+  }
+}
