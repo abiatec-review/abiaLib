@@ -52,10 +52,7 @@ module.exports = {
                 ]
             }
         ],
-        "indent": [
-            "error",
-            2
-        ],
+        "indent": "off",
         "import/no-extraneous-dependencies": "off",
         "import/no-cycle": "off",
         "react/jsx-filename-extension": "off",
